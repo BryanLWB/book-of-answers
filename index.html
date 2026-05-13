@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>答案之书</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="scene">
+    <div class="light-field" id="lightField" aria-hidden="true"></div>
+
+    <section class="experience">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换到暗色主题" title="切换主题">
+        <span class="theme-icon theme-sun" aria-hidden="true">
+          <span class="sun-core"></span>
+          <span class="sun-ray ray-1"></span>
+          <span class="sun-ray ray-2"></span>
+          <span class="sun-ray ray-3"></span>
+          <span class="sun-ray ray-4"></span>
+        </span>
+        <span class="theme-icon theme-moon" aria-hidden="true"></span>
+      </button>
+      <p class="eyebrow">The Book of Answers</p>
+      <div class="answer-shell" aria-live="polite">
+        <p class="answer-label" id="answerLabel">答案尚未显现</p>
+        <h1 class="answer-text" id="answerText">闭上眼，把问题放在心里。</h1>
+      </div>
+
+      <div class="book-stage">
+        <div class="book-shadow"></div>
+        <button class="book" id="answerBook" type="button" aria-label="打开答案之书">
+          <span class="book-cover cover-back"></span>
+          <span class="book-spine"></span>
+          <span class="book-glow"></span>
+          <span class="book-pages">
+            <span class="page-stack page-stack-left"></span>
+            <span class="page-stack page-stack-right"></span>
+            <span class="book-spread">
+              <span class="page-face left-page">
+                <span class="page-content">
+                  <span class="page-mark">THE ANSWER</span>
+                  <span class="page-answer" id="pageAnswerText">静候启示</span>
+                </span>
+              </span>
+              <span class="page-face right-page">
+                <span class="page-content">
+                  <span class="page-mark">ORACLE NOTES</span>
+                  <span class="page-script"></span>
+                  <span class="page-figure">
+                    <span class="figure-post"></span>
+                    <span class="figure-scroll"></span>
+                  </span>
+                </span>
+              </span>
+              <span class="page-turn" aria-hidden="true">
+                <span class="turn-face turn-front">
+                  <span class="page-content">
+                    <span class="page-mark">REVEAL</span>
+                    <span class="page-script"></span>
+                  </span>
+                </span>
+                <span class="turn-face turn-back">
+                  <span class="page-content">
+                    <span class="page-mark">ANSWER</span>
+                    <span class="page-answer page-answer-back">命运会在合适的时候发声</span>
+                  </span>
+                </span>
+              </span>
+              <span class="page-gutter"></span>
+            </span>
+            <span class="book-ribbon"></span>
+          </span>
+          <span class="book-cover cover-front">
+            <span class="cover-shine"></span>
+          </span>
+        </button>
+      </div>
+
+      <div class="controls">
+        <button class="action" id="openButton" type="button">开始解答</button>
+        <button class="action action-secondary" id="closeButton" type="button" hidden>合上答案之书</button>
+      </div>
+      <p class="hint">每一次翻页，都会给你一个方向。</p>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>

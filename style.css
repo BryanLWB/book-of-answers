@@ -144,11 +144,12 @@ body::after {
   display: grid;
   justify-items: center;
   text-align: center;
+  transform: translateY(-20px);
 }
 
 .theme-toggle {
   justify-self: end;
-  margin: 0 0 14px;
+  margin: -18px 0 34px;
   position: relative;
   width: 48px;
   height: 48px;
@@ -250,7 +251,7 @@ body[data-theme="dark"] .theme-moon {
 }
 
 .eyebrow {
-  margin: 0 0 18px;
+  margin: -4px 0 24px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   font-family: "Baskerville", "Times New Roman", serif;
@@ -942,8 +943,14 @@ body[data-theme="dark"] .theme-moon {
   }
 
   .theme-toggle {
+    position: relative;
+    top: 0;
+    right: auto;
+    margin: -10px 0 30px;
     justify-self: center;
-    margin-bottom: 12px;
+    width: 42px;
+    height: 42px;
+    z-index: auto;
   }
 
   .answer-shell {
@@ -1018,8 +1025,13 @@ body[data-theme="dark"] .theme-moon {
 }
 
 @media (max-width: 420px) {
+  .theme-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
   .eyebrow {
-    margin-bottom: 14px;
+    margin: -2px 0 16px;
     font-size: 0.76rem;
     letter-spacing: 0.2em;
   }

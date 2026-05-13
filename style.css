@@ -149,7 +149,7 @@ body::after {
 
 .theme-toggle {
   justify-self: end;
-  margin: -18px 0 34px;
+  margin: 0 0 22px;
   position: relative;
   width: 48px;
   height: 48px;
@@ -946,7 +946,7 @@ body[data-theme="dark"] .theme-moon {
     position: relative;
     top: 0;
     right: auto;
-    margin: -10px 0 30px;
+    margin: 0 0 18px;
     justify-self: center;
     width: 42px;
     height: 42px;

@@ -331,7 +331,7 @@ body[data-theme="dark"] .theme-moon {
   width: min(520px, 100%);
   margin: 0;
   color: var(--top-answer-color);
-  font-size: clamp(2.16rem, 4.4vw, 2.68rem);
+  font-size: clamp(1.44rem, 2.95vw, 1.79rem);
   line-height: 1.5;
   letter-spacing: 0.05em;
   font-family: "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", "STSong", serif;
@@ -1111,8 +1111,13 @@ body[data-theme="dark"] .theme-moon {
 }
 
 @media (max-width: 720px) {
+  body {
+    overflow-y: auto;
+  }
+
   .scene {
-    padding: 20px 14px 32px;
+    min-height: auto;
+    padding: 20px 14px 56px;
   }
 
   .theme-toggle {
@@ -1132,13 +1137,13 @@ body[data-theme="dark"] .theme-moon {
   }
 
   .message-stage {
-    min-height: 196px;
+    min-height: 168px;
     margin-bottom: 12px;
   }
 
   .intro-prompt {
     width: min(100%, 420px);
-    font-size: 2rem;
+    font-size: 1.34rem;
     line-height: 1.45;
   }
 
@@ -1223,11 +1228,11 @@ body[data-theme="dark"] .theme-moon {
   }
 
   .intro-prompt {
-    font-size: 1.92rem;
+    font-size: 1.28rem;
   }
 
   .message-stage {
-    min-height: 182px;
+    min-height: 156px;
   }
 
   .answer-label {
@@ -1248,6 +1253,11 @@ body[data-theme="dark"] .theme-moon {
     min-width: 144px;
     padding: 12px 14px;
     font-size: 0.92rem;
+  }
+
+  .hint {
+    margin-top: 18px;
+    padding-bottom: 8px;
   }
 
   .book-pages {

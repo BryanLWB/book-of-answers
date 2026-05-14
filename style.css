@@ -192,8 +192,8 @@ body::after {
 }
 
 .theme-toggle {
-  justify-self: end;
-  margin: 0 0 22px;
+  justify-self: center;
+  margin: 22px 0 22px;
   position: relative;
   width: 48px;
   height: 48px;
@@ -338,7 +338,7 @@ body[data-theme="dark"] .theme-moon {
   text-align: center;
   white-space: pre-line;
   transition: opacity 360ms ease, visibility 0s linear 360ms;
-  animation: introTwinkle 3.4s ease-in-out infinite;
+  animation: introTwinkle 4.2s ease-in-out infinite;
 }
 
 .answer-shell {
@@ -1112,12 +1112,12 @@ body[data-theme="dark"] .theme-moon {
 
 @media (max-width: 720px) {
   body {
-    overflow-y: auto;
+    overflow: hidden;
   }
 
   .scene {
     min-height: 100svh;
-    padding: 20px 14px 56px;
+    padding: 16px 14px 24px;
   }
 
   .experience {
@@ -1128,7 +1128,7 @@ body[data-theme="dark"] .theme-moon {
     position: relative;
     top: 0;
     right: auto;
-    margin: 0 0 22px;
+    margin: 18px 0 18px;
     justify-self: center;
     width: 42px;
     height: 42px;
@@ -1141,13 +1141,13 @@ body[data-theme="dark"] .theme-moon {
   }
 
   .message-stage {
-    min-height: 168px;
-    margin-bottom: 12px;
+    min-height: 152px;
+    margin-bottom: 8px;
   }
 
   .intro-prompt {
     width: min(100%, 420px);
-    font-size: 1.34rem;
+    font-size: 1.22rem;
     line-height: 1.45;
   }
 
@@ -1157,9 +1157,9 @@ body[data-theme="dark"] .theme-moon {
   }
 
   .book-stage {
-    margin: 28px 0 22px;
+    margin: 18px 0 16px;
     width: 100%;
-    height: 238px;
+    height: 214px;
   }
 
   .book {
@@ -1206,8 +1206,13 @@ body[data-theme="dark"] .theme-moon {
   }
 
   .action {
-    min-width: 160px;
-    padding: 13px 18px;
+    min-width: 152px;
+    padding: 12px 16px;
+  }
+
+  .hint {
+    margin-top: 12px;
+    font-size: 0.88rem;
   }
 }
 
@@ -1226,17 +1231,17 @@ body[data-theme="dark"] .theme-moon {
   }
 
   .eyebrow {
-    margin: -2px 0 20px;
+    margin: -2px 0 16px;
     font-size: 0.76rem;
     letter-spacing: 0.2em;
   }
 
   .intro-prompt {
-    font-size: 1.28rem;
+    font-size: 1.16rem;
   }
 
   .message-stage {
-    min-height: 156px;
+    min-height: 136px;
   }
 
   .answer-label {
@@ -1245,23 +1250,24 @@ body[data-theme="dark"] .theme-moon {
   }
 
   .book-stage {
-    height: 214px;
+    height: 196px;
   }
 
   .controls {
     width: min(100%, 320px);
-    height: 52px;
+    height: 48px;
   }
 
   .action {
-    min-width: 144px;
-    padding: 12px 14px;
-    font-size: 0.92rem;
+    min-width: 138px;
+    padding: 11px 14px;
+    font-size: 0.88rem;
   }
 
   .hint {
-    margin-top: 18px;
-    padding-bottom: 8px;
+    margin-top: 12px;
+    padding-bottom: 0;
+    font-size: 0.84rem;
   }
 
   .book-pages {

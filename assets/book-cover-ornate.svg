@@ -1,54 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 820">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1080">
   <defs>
-    <linearGradient id="coverBg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#294f43"/>
-      <stop offset="54%" stop-color="#18382f"/>
-      <stop offset="100%" stop-color="#0f241d"/>
+    <radialGradient id="bg" cx="50%" cy="18%" r="92%">
+      <stop offset="0%" stop-color="#2f6254"/>
+      <stop offset="42%" stop-color="#1b4037"/>
+      <stop offset="100%" stop-color="#0c211c"/>
+    </radialGradient>
+    <linearGradient id="glass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#effff8"/>
+      <stop offset="16%" stop-color="#c6f4e6"/>
+      <stop offset="38%" stop-color="#84dac3"/>
+      <stop offset="62%" stop-color="#3aa287"/>
+      <stop offset="84%" stop-color="#1b6b5d"/>
+      <stop offset="100%" stop-color="#effff8"/>
     </linearGradient>
-    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#f6e3ab"/>
-      <stop offset="38%" stop-color="#d2af6a"/>
-      <stop offset="72%" stop-color="#8e6a35"/>
-      <stop offset="100%" stop-color="#faebbb"/>
+    <linearGradient id="goldGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f6eab9"/>
+      <stop offset="24%" stop-color="#d4c389"/>
+      <stop offset="54%" stop-color="#88c9bb"/>
+      <stop offset="78%" stop-color="#2d8d77"/>
+      <stop offset="100%" stop-color="#f2efcf"/>
     </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#05100d" flood-opacity=".66"/>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#05100d" flood-opacity=".36"/>
+    </filter>
   </defs>
 
-  <rect width="600" height="820" rx="26" fill="url(#coverBg)"/>
-  <rect x="26" y="26" width="548" height="768" rx="20" fill="none" stroke="url(#gold)" stroke-width="3"/>
-  <rect x="48" y="48" width="504" height="724" rx="16" fill="none" stroke="url(#gold)" stroke-width="1.5" opacity=".7"/>
+  <rect width="1600" height="1080" rx="34" fill="url(#bg)"/>
+  <rect x="18" y="18" width="1564" height="1044" rx="30" fill="none" stroke="#0a1c18" stroke-width="6"/>
 
-  <g fill="url(#gold)" opacity=".9">
-    <circle cx="112" cy="112" r="4"/>
-    <circle cx="488" cy="112" r="4"/>
-    <circle cx="112" cy="708" r="4"/>
-    <circle cx="488" cy="708" r="4"/>
-    <path d="M88 118c18-6 30-20 36-40 7 18 20 31 38 37-18 5-31 17-39 37-6-18-17-29-35-34z" fill="none" stroke="url(#gold)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M512 118c-18-6-30-20-36-40-7 18-20 31-38 37 18 5 31 17 39 37 6-18 17-29 35-34z" fill="none" stroke="url(#gold)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M88 702c18 6 30 20 36 40 7-18 20-31 38-37-18-5-31-17-39-37-6 18-17 29-35 34z" fill="none" stroke="url(#gold)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M512 702c-18 6-30 20-36 40-7-18-20-31-38-37 18-5 31-17 39-37 6 18 17 29 35 34z" fill="none" stroke="url(#gold)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="112" y="18" width="6" height="1044" fill="url(#goldGlass)"/>
+  <rect x="152" y="18" width="4" height="1044" fill="url(#goldGlass)" opacity=".92"/>
+  <rect x="1444" y="18" width="4" height="1044" fill="url(#goldGlass)" opacity=".92"/>
+  <rect x="1484" y="18" width="6" height="1044" fill="url(#goldGlass)"/>
+
+  <ellipse cx="800" cy="164" rx="540" ry="118" fill="#55a893" opacity=".12"/>
+
+  <g filter="url(#shadow)">
+    <text x="800" y="248" text-anchor="middle" fill="url(#goldGlass)" font-size="166" font-style="italic"
+      font-family="'Baskerville', 'Palatino Linotype', 'Times New Roman', serif">Book of Answers</text>
   </g>
 
-  <g fill="url(#gold)" font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">
-    <text x="300" y="122" font-size="30" letter-spacing="3">THE</text>
-    <text x="300" y="204" font-size="70" font-weight="700">BOOK OF</text>
-  </g>
+  <g transform="translate(800 620)" fill="none" stroke="url(#goldGlass)" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="12" cy="78" rx="450" ry="156" transform="rotate(-18 12 78)" stroke-width="4"/>
+    <ellipse cx="84" cy="16" rx="386" ry="132" transform="rotate(-28 84 16)" stroke-width="3.2"/>
 
-  <g transform="translate(300 390)" fill="none" stroke="url(#gold)" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M-92-54c22 0 40-12 54-34 14 22 32 34 54 34 6 36 28 62 68 80-34 12-57 34-68 66-25-11-46-17-54-17s-29 6-54 17c-11-32-34-54-68-66 40-18 62-44 68-80z" stroke-width="8"/>
-    <path d="M0-18l24 44-24 40-24-40z" stroke-width="6"/>
-    <path d="M0-70v32M-74 18l34 18M74 18l-34 18" stroke-width="5"/>
-    <circle cx="0" cy="-82" r="8" fill="url(#gold)"/>
-    <circle cx="-92" cy="12" r="6" fill="url(#gold)"/>
-    <circle cx="92" cy="12" r="6" fill="url(#gold)"/>
-  </g>
+    <circle cx="-294" cy="182" r="18" fill="url(#goldGlass)"/>
+    <circle cx="-170" cy="16" r="12" fill="url(#goldGlass)"/>
+    <circle cx="390" cy="-184" r="18" fill="url(#goldGlass)"/>
+    <circle cx="332" cy="-34" r="9" fill="url(#goldGlass)"/>
+    <circle cx="434" cy="2" r="8" fill="url(#goldGlass)"/>
 
-  <g fill="url(#gold)" font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">
-    <text x="300" y="664" font-size="68" font-weight="700">ANSWERS</text>
-  </g>
+    <g transform="translate(-10 -12)" filter="url(#softShadow)">
+      <circle cx="0" cy="0" r="144" stroke-width="14"/>
+      <circle cx="0" cy="0" r="120" stroke-width="4"/>
+      <circle cx="0" cy="0" r="44" stroke-width="10"/>
+      <circle cx="0" cy="0" r="18" fill="url(#glass)"/>
+      <path d="M0-128v96M0 128v-96M-128 0h96M128 0h-96" stroke-width="6"/>
+      <path d="M-82-82l56 56M82-82l-56 56M-82 82l56-56M82 82l-56-56" stroke-width="4"/>
+      <path d="M-98 102L78-74" stroke-width="22"/>
+      <path d="M-98 102L78-74" stroke="#ebfff8" stroke-width="8"/>
+      <circle cx="0" cy="0" r="130" stroke-width="2" opacity=".52"/>
+    </g>
 
-  <g transform="translate(300 736)">
-    <rect x="-118" y="-28" width="236" height="56" rx="13" fill="#9d7d49"/>
-    <rect x="-110" y="-20" width="220" height="40" rx="10" fill="url(#gold)"/>
-    <path d="M-62 0h124" stroke="#fbf3d2" stroke-width="3" stroke-linecap="round" opacity=".78"/>
   </g>
 </svg>

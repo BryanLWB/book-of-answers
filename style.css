@@ -320,7 +320,7 @@ body[data-theme="dark"] .theme-moon {
 .message-stage {
   position: relative;
   width: min(620px, 100%);
-  min-height: 188px;
+  min-height: 236px;
   margin: 0 0 18px;
   display: grid;
   place-items: center;
@@ -331,10 +331,10 @@ body[data-theme="dark"] .theme-moon {
   width: min(520px, 100%);
   margin: 0;
   color: var(--top-answer-color);
-  font-size: clamp(1.08rem, 2.2vw, 1.34rem);
-  line-height: 1.7;
+  font-size: clamp(2.16rem, 4.4vw, 2.68rem);
+  line-height: 1.5;
   letter-spacing: 0.05em;
-  font-family: "Baskerville", "Didot", "Palatino Linotype", serif;
+  font-family: "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", "STSong", serif;
   text-align: center;
   white-space: pre-line;
   transition: opacity 360ms ease, visibility 0s linear 360ms;
@@ -1132,14 +1132,14 @@ body[data-theme="dark"] .theme-moon {
   }
 
   .message-stage {
-    min-height: 154px;
+    min-height: 196px;
     margin-bottom: 12px;
   }
 
   .intro-prompt {
     width: min(100%, 420px);
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 2rem;
+    line-height: 1.45;
   }
 
   .answer-text {
@@ -1223,11 +1223,11 @@ body[data-theme="dark"] .theme-moon {
   }
 
   .intro-prompt {
-    font-size: 0.96rem;
+    font-size: 1.92rem;
   }
 
   .message-stage {
-    min-height: 142px;
+    min-height: 182px;
   }
 
   .answer-label {

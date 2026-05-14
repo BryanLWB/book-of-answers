@@ -22,6 +22,7 @@
         <span class="theme-icon theme-moon" aria-hidden="true"></span>
       </button>
       <p class="eyebrow">The Book of Answers</p>
+      <p class="intro-prompt" id="introPrompt">闭上眼，把问题放在心里，然后打开答案之书</p>
       <div class="answer-shell" aria-live="polite">
         <p class="answer-label" id="answerLabel">答案尚未显现</p>
         <h1 class="answer-text" id="answerText">闭上眼，把问题放在心里。</h1>
@@ -77,9 +78,9 @@
         </button>
       </div>
 
-      <div class="controls">
+      <div class="controls" id="controls">
         <button class="action" id="openButton" type="button">开始解答</button>
-        <button class="action action-secondary" id="closeButton" type="button" hidden>合上答案之书</button>
+        <button class="action action-secondary" id="closeButton" type="button">合上答案之书</button>
       </div>
       <p class="hint">每一次翻页，都会给你一个方向。</p>
     </section>

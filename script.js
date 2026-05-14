@@ -1,7 +1,9 @@
 const answerBook = document.querySelector("#answerBook");
+const controls = document.querySelector("#controls");
 const openButton = document.querySelector("#openButton");
 const closeButton = document.querySelector("#closeButton");
 const themeToggle = document.querySelector("#themeToggle");
+const experience = document.querySelector(".experience");
 const answerLabel = document.querySelector("#answerLabel");
 const answerText = document.querySelector("#answerText");
 const pageAnswerText = document.querySelector("#pageAnswerText");
@@ -11,6 +13,7 @@ let revealTimer = [];
 let isAnimating = false;
 let hasOpened = false;
 const CLOSED_PROMPT = "闭上眼，把问题放在心里。";
+const INTRO_PROMPT = "闭上眼，把问题放在心里，然后打开答案之书";
 const PAGE_PROMPT = "Await the whisper";
 const answers = Array.isArray(window.answerLibrary) ? window.answerLibrary : [];
 const fallbackAnswer = {
@@ -93,18 +96,22 @@ function closeBook() {
 
   isAnimating = true;
   clearTimers();
+  experience.classList.add("is-closing");
+  answerShell.classList.remove("revealed");
   answerBook.classList.remove("flipping", "opening", "opened");
-  closeButton.hidden = true;
-  openButton.textContent = "开始解答";
+  controls.classList.remove("is-split");
+  controls.classList.add("is-merging");
 
   revealTimer.push(window.setTimeout(() => {
+    experience.classList.remove("book-open", "is-closing");
     answerLabel.textContent = "答案尚未显现";
     answerText.textContent = CLOSED_PROMPT;
     pageAnswerText.textContent = PAGE_PROMPT;
-    answerShell.classList.remove("revealed");
+    openButton.textContent = "开始解答";
+    controls.classList.remove("is-merging");
     hasOpened = false;
     isAnimating = false;
-  }, 1100));
+  }, 560));
 }
 
 function revealAnswer() {
@@ -126,13 +133,16 @@ function revealAnswer() {
   }
 
   revealTimer.push(window.setTimeout(() => {
+    experience.classList.remove("is-closing");
+    experience.classList.add("book-open");
     answerLabel.textContent = "答案浮现";
     const nextAnswer = pickAnswer();
     answerText.textContent = nextAnswer.zh;
     pageAnswerText.textContent = nextAnswer.en;
     answerShell.classList.add("revealed");
     openButton.textContent = "再问一次";
-    closeButton.hidden = false;
+    controls.classList.remove("is-merging");
+    controls.classList.add("is-split");
   }, 980));
 
   revealTimer.push(window.setTimeout(() => {
@@ -153,4 +163,5 @@ themeToggle.addEventListener("click", () => {
 setTheme("light");
 pageAnswerText.textContent = PAGE_PROMPT;
 answerText.textContent = CLOSED_PROMPT;
+document.getElementById("introPrompt").textContent = INTRO_PROMPT;
 initHalos();

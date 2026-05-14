@@ -1116,7 +1116,7 @@ body[data-theme="dark"] .theme-moon {
   }
 
   .scene {
-    min-height: auto;
+    min-height: 100svh;
     padding: 20px 14px 56px;
   }
 

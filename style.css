@@ -1120,11 +1120,15 @@ body[data-theme="dark"] .theme-moon {
     padding: 20px 14px 56px;
   }
 
+  .experience {
+    transform: translateY(0);
+  }
+
   .theme-toggle {
     position: relative;
     top: 0;
     right: auto;
-    margin: 0 0 18px;
+    margin: 0 0 22px;
     justify-self: center;
     width: 42px;
     height: 42px;

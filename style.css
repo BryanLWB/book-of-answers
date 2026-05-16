@@ -1122,10 +1122,12 @@ body[data-theme="dark"] .theme-moon {
   .scene {
     min-height: 100svh;
     padding: 16px 14px 24px;
+    place-items: start center;
   }
 
   .experience {
     transform: translateY(0);
+    align-content: start;
   }
 
   .theme-toggle {
